@@ -1,0 +1,14 @@
+2024-02-17 19:16:33,269 ERROR Cant create table:  table contacts already exists
+2024-02-17 19:16:33,271 WARNING Incomplete data was provided
+2024-02-17 19:16:33,272 ERROR Cant create table:  table contacts already exists
+2024-02-17 19:16:33,575 ERROR Cant create table:  table contacts already exists
+2024-02-17 19:16:33,591 ERROR Cant create table:  table contacts already exists
+2024-02-17 19:16:33,598 ERROR Cant create table:  table contacts already exists
+2024-02-17 19:16:33,603 ERROR Cant create table:  table contacts already exists
+2024-02-17 19:16:33,605 WARNING Incomplete data was provided
+2024-02-17 19:16:33,609 WARNING Incomplete data was provided
+2024-02-17 19:16:33,610 WARNING Incomplete data was provided
+2024-02-17 19:16:33,622 ERROR Cant create table:  table contacts already exists
+2024-02-17 19:16:33,623 WARNING Incomplete data was provided
+2024-02-17 19:16:33,624 ERROR No contact with the name Jane Smith phone_num 
+2024-02-17 19:16:33,628 ERROR Cant create table:  table contacts already exists
