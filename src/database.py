@@ -31,7 +31,7 @@ class DataBase:
                 self.cursor = self.connection.cursor()
                 self.cursor.execute(
                     """
-                    CREATE TABLE contacts (
+                    CREATE TABLE IF NOT EXISTS contacts (
                         name text,
                         phone_num text,
                         email text,
