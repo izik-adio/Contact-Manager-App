@@ -1,6 +1,6 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtCore import Qt, QTimer, QObject, pyqtSignal
-
+from update_contact import Ui_Form as Contact_Ui
 from database import DataBase
 
 
@@ -15,6 +15,10 @@ class Ui_Form(QObject, object):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.handleSearch)
         self.timer.start(500)
+
+        self.update_contact_ui = Contact_Ui()
+        self.form = QtWidgets.QWidget()
+        self.update_contact_ui.setupUi(self.form)
 
     def setupUi(self, Form):
         self.DataBase = DataBase()
@@ -287,7 +291,6 @@ class Ui_Form(QObject, object):
         delete_contact_dialog.setText(message)
         delete_contact_dialog.setFont(QtGui.QFont("Georgia", 12))
         delete_contact_dialog.setWindowTitle("Delete Task Confirmation")
-        delete_contact_dialog.setWindowIcon(QtGui.QIcon("mainIcon.png"))
         delete_contact_dialog.setIcon(QtWidgets.QMessageBox.Icon.Warning)
         delete_contact_dialog.setStandardButtons(
             QtWidgets.QMessageBox.StandardButton.Yes
@@ -319,7 +322,6 @@ class Ui_Form(QObject, object):
             else:
                 self.info_dialouge(f"{name.upper()} contact has {"not".upper()} been deleted.", "Contact Not Deleted")
 
-
     def update_contact(self):
         selected = self.search_contactView.selectedItems()
         if selected == [] or len(selected) > 4:
@@ -330,7 +332,10 @@ class Ui_Form(QObject, object):
         else:
             name = selected[0].text()
             no = selected[1].text()
-            self.DataBase.update_contact(previous_name=name, previous_num=no, )
+            user_data = self.DataBase.contact_detail(name, no)
+            self.update_contact_ui.fill_inputs(*user_data)
+            self.form.show()
+
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate

@@ -74,7 +74,7 @@ class DataBase:
         if self.contact_detail(previous_name, previous_num):
             try:
                 self.cursor.execute(
-                    """ UPDATE contacts SET name = ?, phone_num = ?, email = ?, adress = ? WHERE name = ? OR phone_num = ? """,
+                    """ UPDATE contacts SET name = ?, phone_num = ?, email = ?, address = ? WHERE name = ? OR phone_num = ? """,
                     (name, phone_num, email, addr, previous_name, previous_num),
                 )
                 self.connection.commit()
