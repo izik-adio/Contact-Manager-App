@@ -336,7 +336,6 @@ class Ui_Form(QObject, object):
             self.update_contact_ui.fill_inputs(*user_data)
             self.form.show()
 
-
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
