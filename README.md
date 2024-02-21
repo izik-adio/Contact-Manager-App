@@ -1,3 +1,5 @@
+![Cover Image](./screenshot/5.png)
+
 # Contact Manager App
 
 Welcome to the Contact Manager app! This application is designed to help you organize your contacts effortlessly. With a range of features and a user-friendly interface, managing your contacts has never been easier.
